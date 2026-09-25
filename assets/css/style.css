@@ -203,7 +203,7 @@ body{
   color:var(--color-ink-60);
 }
 
-.brand-lockup{ text-align:center; display:flex; flex-direction:column; align-items:center; gap:clamp(.3rem,.8vh,.9rem); max-width:min(88vw, 58rem); }
+.brand-lockup{ text-align:center; display:flex; flex-direction:column; align-items:center; align-self:center; gap:clamp(.3rem,.8vh,.9rem); max-width:min(88vw, 58rem); }
 .brand-lockup__logo{ width:clamp(33rem, 30vw, 40rem); }
 .brand-lockup__logo img{ width:100%; height:auto; }
 .brand-lockup__word{
