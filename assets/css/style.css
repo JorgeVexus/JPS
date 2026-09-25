@@ -203,7 +203,7 @@ body{
   color:var(--color-ink-60);
 }
 
-.brand-lockup{ text-align:center; display:flex; flex-direction:column; align-items:center; gap:clamp(.3rem,.8vh,.9rem); }
+.brand-lockup{ text-align:center; display:flex; flex-direction:column; align-items:center; gap:clamp(.3rem,.8vh,.9rem); max-width:min(88vw, 58rem); }
 .brand-lockup__logo{ width:clamp(33rem, 30vw, 40rem); }
 .brand-lockup__logo img{ width:100%; height:auto; }
 .brand-lockup__word{
@@ -218,10 +218,11 @@ body{
 }
 .brand-lockup__tag{
   font-weight:700;
-  font-size:16px;
+  font-size:clamp(.7rem, 1.05vw, 1rem);
   letter-spacing:.18em;
   text-transform:uppercase;
   color:var(--color-ink-40);
+  white-space:normal;
   margin-top:2px;
 }
 
