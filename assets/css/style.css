@@ -376,7 +376,7 @@ body{
   flex-direction:column;
   justify-content:center;
   gap:clamp(1.5rem,2.6vw,2.2rem);
-  margin-left:min(43%, 41rem);
+  margin-left:auto;
   width:min(57%, 49rem);
   padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,6rem) clamp(2.5rem,5vw,4rem) clamp(1.5rem,4vw,3rem);
 }
