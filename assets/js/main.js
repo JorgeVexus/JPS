@@ -40,8 +40,8 @@
     function updateParallax() {
       var rect = parallaxRoot.getBoundingClientRect();
       var progress = rect.top / (window.innerHeight || 1); // 0 at top of view, negative as it scrolls up
-      var offset = Math.max(-40, Math.min(40, progress * -40));
-      parallaxLayer.style.transform = 'scale(1.08) translateY(' + offset.toFixed(2) + 'px)';
+      var offset = Math.max(-14, Math.min(14, progress * -14));
+      parallaxLayer.style.transform = 'scale(1.02) translateY(' + offset.toFixed(2) + 'px)';
       ticking = false;
     }
 

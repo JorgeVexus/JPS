@@ -159,8 +159,8 @@ body{
   position:absolute; inset:0;
   background-image:url('../img/hero-overlay.jpg');
   background-size:cover;
-  background-position:78% bottom;
-  transform:scale(1.05);
+  background-position:62% bottom;
+  transform:scale(1.02);
   will-change:transform;
 }
 .hero__scrim{
