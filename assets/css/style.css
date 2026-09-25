@@ -159,8 +159,8 @@ body{
   position:absolute; inset:0;
   background-image:url('../img/hero-overlay.jpg');
   background-size:cover;
-  background-position:78% center;
-  transform:scale(1.08);
+  background-position:78% bottom;
+  transform:scale(1.05);
   will-change:transform;
 }
 .hero__scrim{
@@ -490,7 +490,7 @@ a.site-footer__row:hover{ color:var(--color-primary-soft); transform:translateX(
 
 @media (max-width:1100px){
   .hero{ min-height:auto; padding-top:2rem; }
-  .hero__bg{ background-position:85% center; }
+  .hero__bg{ background-position:85% bottom; }
   .brand-lockup__logo{ width:min(70vw, 28rem); }
   .hero__row{ flex-direction:column; align-items:center; text-align:center; gap:2rem; }
   .eyebrow-list{ align-items:center; flex-direction:row; flex-wrap:wrap; justify-content:center; gap:.4rem 1rem; }
