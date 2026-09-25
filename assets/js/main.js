@@ -63,7 +63,7 @@
     var magnets = Array.prototype.slice.call(document.querySelectorAll('[data-magnetic]'));
 
     magnets.forEach(function (el) {
-      var strength = 0.28;
+      var strength = 0.15;
 
       el.addEventListener('mousemove', function (e) {
         var rect = el.getBoundingClientRect();
