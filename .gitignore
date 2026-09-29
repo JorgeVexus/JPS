@@ -3,3 +3,7 @@
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Notes from a separate Webflow-rebuild effort in this same folder —
+# not part of this static site, kept local only, not tracked here.
+WEBFLOW-HANDOFF.md
