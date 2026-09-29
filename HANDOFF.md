@@ -4,6 +4,15 @@
 **Estado:** Desplegado y en producción en https://juanpackaging.com
 **Repo:** https://github.com/JorgeVexus/JPS (rama `main`)
 
+> ⚠️ **Si ves un archivo `WEBFLOW-HANDOFF.md` en esta misma carpeta:** es de un
+> esfuerzo paralelo/distinto reconstruyendo este sitio en Webflow (no en este
+> repo). Ese archivo dice que este repo estático está "abandonado" — **eso no
+> es correcto para el trabajo de esta sesión**: el usuario confirmó
+> explícitamente seguir trabajando ESTA página estática (está en producción
+> en juanpackaging.com). Está en `.gitignore` a propósito, no se sube al
+> repo. Si hay dudas sobre cuál versión tocar, preguntar al usuario antes de
+> asumir.
+
 ---
 
 ## 1. Qué es esto
@@ -207,6 +216,38 @@ pero no se estira a menos que el contenido lo requiera. Esto fue un ajuste
 explícito ("hazlo más pequeño en cuanto a width") — no volver a poner
 `width:100%` ni `justify-content:space-between` en esos botones sin que lo
 pidan.
+
+### 5.10 Toggle de idioma (EN/ES)
+
+Sitio bilingüe, sin recargar página. Toggle flotante fijo en la esquina
+superior derecha (`.lang-toggle` en `style.css`), con banderas SVG propias
+(`assets/img/flag-us.svg`, `assets/img/flag-mx.svg` — banderas simplificadas,
+sin escudo en la mexicana, es intencional para un ícono pequeño de UI).
+
+**Cómo funciona** (`assets/js/i18n.js`):
+- Cada elemento traducible tiene `data-i18n="clave"` en el HTML.
+- Al cargar, el script guarda el `innerHTML` ORIGINAL (inglés) de cada uno
+  en memoria — así el toggle a inglés siempre restaura exactamente el
+  markup fuente, nunca hay que mantener el inglés duplicado en el diccionario.
+- El diccionario de traducciones (español) vive todo en `i18n.js`, como HTML
+  strings (permite mantener `<em>`, `<br>`, `<p>` anidados donde el original
+  los tiene).
+- El idioma elegido se guarda en `localStorage` (`jps-lang`) y se re-aplica
+  solo al cargar.
+- También actualiza `<html lang>` y el `<title>`/meta description.
+
+**Si se agrega texto nuevo al sitio:** hay que decidir si es traducible
+(agregar `data-i18n="seccion.clave"` en el HTML + la entrada en el
+diccionario de `i18n.js`) o si se deja igual en ambos idiomas (nombres
+propios como "Juan Packaging Solutions", el email, direcciones — esos NO
+llevan `data-i18n`).
+
+**Traducción:** no es literal palabra por palabra, es una adaptación
+profesional manteniendo el tono/formalidad del inglés (pedido explícito del
+usuario). Ojo con el párrafo del hero (`hero.copy`) — está deliberadamente
+recortado un poco respecto a una traducción más "natural" para no romper el
+presupuesto de 100vh (ver 5.1); si se reescribe, volver a probar en
+1536×700 con `[data-lang-btn="es"]` activo.
 
 ## 6. Contactos y enlaces actuales (verificar si cambian)
 
